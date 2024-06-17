@@ -1,4 +1,4 @@
-package de.fhws.fiw.fds.suttondemo.server.api.services;
+package de.fhws.fiw.fds.ex03.server.api.services;
 
 import de.fhws.fiw.fds.sutton.server.api.serviceAdapters.Exceptions.SuttonWebAppException;
 import de.fhws.fiw.fds.sutton.server.api.services.AbstractJerseyService;
