@@ -27,6 +27,7 @@ public class TestEx03AppIT {
     public void test_dispatcher_is_available() throws IOException {
         client.start();
         assertEquals(200, client.getLastStatusCode());
+        // changing BASE_URL  & CONTEXT_PATH and then running tests doesnt work -> i have to restart START
     }
 
     @Test

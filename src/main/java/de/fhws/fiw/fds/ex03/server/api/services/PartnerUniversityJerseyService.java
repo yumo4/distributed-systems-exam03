@@ -13,9 +13,10 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+@Path("partneruniversities")
+
 public class PartnerUniversityJerseyService extends AbstractJerseyService {
 
-//    public PersonJerseyService() {
     public PartnerUniversityJerseyService() {
         super();
     }

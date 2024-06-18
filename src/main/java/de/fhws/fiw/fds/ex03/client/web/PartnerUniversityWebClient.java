@@ -48,4 +48,5 @@ public class PartnerUniversityWebClient {
                 response.getLastStatusCode());
     }
 
+    // TODO: CRUD PartnerUniversityModules
 }

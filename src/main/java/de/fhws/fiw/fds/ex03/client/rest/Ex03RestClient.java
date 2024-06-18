@@ -11,7 +11,9 @@ import java.util.LinkedList;
 import java.util.List;
 public class Ex03RestClient extends AbstractRestClient{
 
-    private static final String BASE_URL = "http://localhost:8080/ex03/api";
+    // change hier wieder zu demo?
+     private static final String BASE_URL = "http://localhost:8080/ex03/api";
+//    private static final String BASE_URL = "http://localhost:8080/demo2/api";
     private static final String GET_ALL_PARTNERUNIVERSITIES = "getAllPartnerUniversities";
     private static final String CREATE_PARTNERUNIVERSITY = "createPartnerUniversity";
 
