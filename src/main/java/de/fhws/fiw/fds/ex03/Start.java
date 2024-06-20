@@ -4,9 +4,9 @@ import de.fhws.fiw.fds.sutton.server.AbstractStart;
 
 public class Start extends AbstractStart {
 
-    // backend url changes hier
+    // Edit BASE_URL here for video
     public static final String CONTEXT_PATH = "ex03";
-//    public static final String CONTEXT_PATH = "demo2";
+//    public static final String CONTEXT_PATH = "demo";
 
     public static void main(String[] args) throws Exception {
         new Start().startTomcat();

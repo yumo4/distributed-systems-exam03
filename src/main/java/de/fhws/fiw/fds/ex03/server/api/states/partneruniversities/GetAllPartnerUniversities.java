@@ -18,8 +18,7 @@ public class GetAllPartnerUniversities extends AbstractGetCollectionState<Respon
     protected void defineTransitionLinks() {
         addLink(PartnerUniversityUri.REL_PATH, PartnerUniversityRelTypes.CREATE_PARTNERUNIVERSITY, getAcceptRequestHeader());
 
-        addLink(PartnerUniversityUri.REL_PATH, PartnerUniversityRelTypes.FILTER_BY_NAME, getAcceptRequestHeader());
-        addLink(PartnerUniversityUri.REL_PATH, PartnerUniversityRelTypes.FILTER_BY_COUNTRY, getAcceptRequestHeader());
-        addLink(PartnerUniversityUri.REL_PATH, PartnerUniversityRelTypes.FILTER_BY_NAME_AND_COUNTRY, getAcceptRequestHeader());
+        addLink(PartnerUniversityUri.REL_PATH + "?name={NAME}", PartnerUniversityRelTypes.FILTER_BY_NAME, getAcceptRequestHeader());
+        addLink(PartnerUniversityUri.REL_PATH + "?size={SIZE}&offset={OFFSET}", PartnerUniversityRelTypes.FILTER_BY_PAGE, getAcceptRequestHeader());
     }
 }

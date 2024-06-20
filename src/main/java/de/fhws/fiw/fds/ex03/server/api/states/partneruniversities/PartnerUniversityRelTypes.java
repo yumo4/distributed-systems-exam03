@@ -9,6 +9,7 @@ public interface PartnerUniversityRelTypes {
     String DELETE_SINGLE_PARTNERUNIVERSITY = "deletePartnerUniversity";
 
     String FILTER_BY_NAME = "filterByName";
+    String FILTER_BY_PAGE = "filterByPage";
     String FILTER_BY_COUNTRY = "filterByCountry";
     String FILTER_BY_NAME_AND_COUNTRY = "filterByNameAndCountry";
 }

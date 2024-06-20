@@ -30,9 +30,9 @@ public class GetAllPartnerUniversityModules extends AbstractGetCollectionRelatio
                 this.primaryId);
 
 
-        addLink(PartnerUniversityUri.REL_PATH + "?name={NAME}", PartnerUniversityRelTypes.FILTER_BY_NAME, getAcceptRequestHeader());
-        addLink(PartnerUniversityUri.REL_PATH + "?country={COUNTRY}", PartnerUniversityRelTypes.FILTER_BY_COUNTRY, getAcceptRequestHeader());
-        addLink(PartnerUniversityUri.REL_PATH + "?universityName={NAME}&country={COUNTRY}", PartnerUniversityRelTypes.FILTER_BY_NAME_AND_COUNTRY, getAcceptRequestHeader());
+//        addLink(PartnerUniversityUri.REL_PATH + "?name={NAME}", PartnerUniversityRelTypes.FILTER_BY_NAME, getAcceptRequestHeader());
+//        addLink(PartnerUniversityUri.REL_PATH + "?country={COUNTRY}", PartnerUniversityRelTypes.FILTER_BY_COUNTRY, getAcceptRequestHeader());
+//        addLink(PartnerUniversityUri.REL_PATH + "?universityName={NAME}&country={COUNTRY}", PartnerUniversityRelTypes.FILTER_BY_NAME_AND_COUNTRY, getAcceptRequestHeader());
         //addLink(UniversityUri.REL_PATH + "?universityName={NAME}&country={COUNTRY}&order={ORDER}", UniversityRelTypes.FILTER_BY_NAME_AND_COUNTRY_ORDER, getAcceptRequestHeader());
 //        addLink(UniversityUri.REL_PATH + "?offset={OFFSET}&size={SIZE}", UniversityRelTypes.PAGING_OF_UNIVERSITIES, getAcceptRequestHeader());
 

@@ -65,9 +65,6 @@ public class Ex03RestClient extends AbstractRestClient{
         return !this.currentPartnerUniversityData.isEmpty() || isLocationHeaderAvailable();
     }
 
-    public boolean isCreateModuleAllowed(){
-        return isLinkAvailable(CREATE_MODULE);
-    }
     // [C]reate PU
     public void createPartnerUniversity(PartnerUniversityClientModel partnerUniversity) throws IOException{
         if(isCreatePartnerUniversityAllowed()){
@@ -79,6 +76,7 @@ public class Ex03RestClient extends AbstractRestClient{
             throw new IllegalStateException();
         }
     }
+
 //     [C]reate PU-Module
 //    public void createPartnerUniversityModule(ModuleClientModel moduleClientModel) throws IOException{
 //        if(isCreatePartnerUniversityAllowed()){
