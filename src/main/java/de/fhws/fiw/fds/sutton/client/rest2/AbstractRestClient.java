@@ -65,7 +65,7 @@ public class AbstractRestClient
 		return locationHeaderURL;
 	}
 
-	public boolean isLocationHeaderAvailable( )
+	public boolean isLocationHeaderAvailable()
 	{
 		return locationHeaderURL != null;
 	}

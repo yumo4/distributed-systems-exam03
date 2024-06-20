@@ -41,4 +41,3 @@ public class QueryByModuleName<R> extends AbstractRelationQuery<R, Module> {
         return DaoFactory.getInstance().getPartnerUniversityModuleDao().readByModuleName(this.primaryId, this.moduleName, searchParameter);
     }
 }
-

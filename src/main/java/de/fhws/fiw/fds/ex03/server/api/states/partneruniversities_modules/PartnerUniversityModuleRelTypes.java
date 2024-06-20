@@ -2,7 +2,8 @@ package de.fhws.fiw.fds.ex03.server.api.states.partneruniversities_modules;
 
 public interface PartnerUniversityModuleRelTypes {
 
-    String CREATE_MODULE = "createLocationOfPerson";
+//    String CREATE_MODULE = "createLocationOfPerson";
+    String CREATE_MODULE = "createModuleOfPartnerUniversity";
     String GET_ALL_MODULES = "getAllModulesOfPartnerUniversity";
 //    String GET_ALL_MODULES = "getAllLinkableModules";
     String UPDATE_SINGLE_MODULE = "updateModuleOfPartnerUniversity";

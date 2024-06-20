@@ -27,6 +27,6 @@ public class DeleteSinglePartnerUniversity extends AbstractDeleteState<Response,
 
     @Override
     protected void defineTransitionLinks() {
-
+        addLink(PartnerUniversityUri.REL_PATH, PartnerUniversityRelTypes.GET_ALL_PARTNERUNIVERSITIES, getAcceptRequestHeader());
     }
 }

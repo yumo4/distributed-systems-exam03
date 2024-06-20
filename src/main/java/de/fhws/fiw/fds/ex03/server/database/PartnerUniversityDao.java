@@ -10,8 +10,8 @@ public interface PartnerUniversityDao extends IDatabaseAccessObject<PartnerUnive
     CollectionModelResult<PartnerUniversity> readByDepartmentName(String departmentName, SearchParameter searchParameter);
     CollectionModelResult<PartnerUniversity> readByDepartmentURL(String departmentURl, SearchParameter searchParameter);
     CollectionModelResult<PartnerUniversity> readByContactPerson(String contactPerson, SearchParameter searchParameter);
-    CollectionModelResult<PartnerUniversity> readByOutgoingStudents(int outgoingStudents, SearchParameter searchParameter);
-    CollectionModelResult<PartnerUniversity> readByIncomingStudents(int incomingStudents, SearchParameter searchParameter);
+//    CollectionModelResult<PartnerUniversity> readByOutgoingStudents(int outgoingStudents, SearchParameter searchParameter);
+//    CollectionModelResult<PartnerUniversity> readByIncomingStudents(int incomingStudents, SearchParameter searchParameter);
     // readBySpringSemesterStart
     // readByAutumnSemesterStart
 

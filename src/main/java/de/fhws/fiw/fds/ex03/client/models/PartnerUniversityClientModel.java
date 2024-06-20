@@ -136,6 +136,7 @@ public class PartnerUniversityClientModel extends AbstractClientModel{
         this.selfLink = selfLink;
     }
 
+    // TODO: set/getLocation -> Module ?
     @JsonIgnore
     public Link getLocation() {
         return location;

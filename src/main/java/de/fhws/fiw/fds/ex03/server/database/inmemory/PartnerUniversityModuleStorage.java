@@ -11,13 +11,13 @@ import de.fhws.fiw.fds.ex03.server.database.PartnerUniversityModuleDao;
 public class PartnerUniversityModuleStorage extends AbstractInMemoryRelationStorage<Module> implements PartnerUniversityModuleDao {
 
     final private ModuleDao moduleStorage;
-    public PartnerUniversityModuleStorage(ModuleDao moduleStorage) {
+    public PartnerUniversityModuleStorage(ModuleDao moduleStorage){
         this.moduleStorage = moduleStorage;
     }
 
 
     @Override
-    protected IDatabaseAccessObject<Module> getSecondaryStorage() {
+    protected IDatabaseAccessObject<Module> getSecondaryStorage(){
 //        return (IDatabaseAccessObject<Module>) this.moduleStorage;
         return this.moduleStorage;
     }

@@ -35,7 +35,7 @@ public class GetSinglePartnerUniversityModule extends AbstractGetRelationState<R
     @Override protected SingleModelResult<Module> loadModel( )
     {
         SingleModelResult<Module> location = DaoFactory.getInstance( ).getModuleDao( ).readById( this.requestedId );
-        if(isPersonLinkedToThisLocation()) {
+        if(isPartnerUniversityLinkedToThisModule()) {
             location.getResult().setPrimaryId(this.primaryId);
         }
         return location;
@@ -43,13 +43,14 @@ public class GetSinglePartnerUniversityModule extends AbstractGetRelationState<R
 
     @Override protected void defineTransitionLinks( )
     {
-        addLink(PartnerUniversityModuleUri.REL_PATH_SHOW_ONLY_LINKED,
+//        addLink(PartnerUniversityModuleUri.REL_PATH_SHOW_ONLY_LINKED,
+        addLink(PartnerUniversityModuleUri.REL_PATH_ID,
                 PartnerUniversityModuleRelTypes.GET_ALL_MODULES,
                 getAcceptRequestHeader( ),
                 this.primaryId );
 
-        if ( isPersonLinkedToThisLocation( ) )
-        {
+//        if ( isPartnerUniversityLinkedToThisModule( ) )
+//        {
             addLink(PartnerUniversityModuleUri.REL_PATH_ID,
                     PartnerUniversityModuleRelTypes.UPDATE_SINGLE_MODULE,
                     getAcceptRequestHeader( ),
@@ -59,17 +60,18 @@ public class GetSinglePartnerUniversityModule extends AbstractGetRelationState<R
                     PartnerUniversityModuleRelTypes.DELETE_MODULE,
                     getAcceptRequestHeader( ),
                     this.primaryId, this.requestedId );
-        }
-        else
-        {
-            addLink(PartnerUniversityModuleUri.REL_PATH_ID,
-                    PartnerUniversityModuleRelTypes.CREATE_MODULE,
-                    getAcceptRequestHeader( ),
-                    this.primaryId, this.requestedId );
-        }
+//        }
+//        else
+//        {
+//            addLink(PartnerUniversityModuleUri.REL_PATH_ID,
+//                    PartnerUniversityModuleRelTypes.CREATE_MODULE,
+//                    getAcceptRequestHeader( ),
+//                    this.primaryId, this.requestedId );
+//        }
     }
 
-    private boolean isPersonLinkedToThisLocation( )
+//    private boolean isPersonLinkedToThisLocation( )
+    private boolean isPartnerUniversityLinkedToThisModule( )
     {
         return !DaoFactory.getInstance( )
                 .getPartnerUniversityModuleDao()

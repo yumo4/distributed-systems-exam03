@@ -40,9 +40,12 @@ public class GetSinglePartnerUniversity extends AbstractGetState<Response, Partn
     @Override
     protected void defineTransitionLinks() {
         addLink( PartnerUniversityUri.REL_PATH_ID, PartnerUniversityRelTypes.UPDATE_SINGLE_PARTNERUNIVERSITY, getAcceptRequestHeader( ),
-                this.requestedId );
+                this.requestedId);
         addLink( PartnerUniversityUri.REL_PATH_ID, PartnerUniversityRelTypes.DELETE_SINGLE_PARTNERUNIVERSITY, getAcceptRequestHeader( ),
-                this.requestedId );
+                this.requestedId);
+        addLink( PartnerUniversityUri.REL_PATH_ID, PartnerUniversityRelTypes.GET_ALL_PARTNERUNIVERSITIES, getAcceptRequestHeader( ),
+                this.requestedId);
         addLink(PartnerUniversityModuleUri.REL_PATH, PartnerUniversityModuleRelTypes.CREATE_MODULE, getAcceptRequestHeader(), this.requestedId);
+        addLink(PartnerUniversityModuleUri.REL_PATH, PartnerUniversityModuleRelTypes.GET_ALL_MODULES, getAcceptRequestHeader(), this.requestedId);
     }
 }

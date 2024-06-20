@@ -3,15 +3,18 @@ package de.fhws.fiw.fds.ex03.server.api.services;
 
 import de.fhws.fiw.fds.ex03.server.api.models.Module;
 import de.fhws.fiw.fds.ex03.server.api.models.PartnerUniversity;
-import de.fhws.fiw.fds.ex03.server.api.queries.QueryByModuleName;
-import de.fhws.fiw.fds.ex03.server.api.queries.QueryByName;
+import de.fhws.fiw.fds.ex03.server.api.queries.*;
 import de.fhws.fiw.fds.ex03.server.api.states.partneruniversities.*;
 import de.fhws.fiw.fds.ex03.server.api.states.partneruniversities_modules.*;
+import de.fhws.fiw.fds.sutton.server.api.queries.AbstractQuery;
 import de.fhws.fiw.fds.sutton.server.api.serviceAdapters.Exceptions.SuttonWebAppException;
 import de.fhws.fiw.fds.sutton.server.api.services.AbstractJerseyService;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 @Path("partneruniversities")
 
@@ -26,12 +29,21 @@ public class PartnerUniversityJerseyService extends AbstractJerseyService {
     public Response getAllPartnerUniversities(
 //            @PathParam("partnerUniversityId") final long partnerUniversityId,
             @DefaultValue("") @QueryParam("name") final String name,
+//            @DefaultValue("") @QueryParam("country") final String country,
+//            @DefaultValue("") @QueryParam("contactperson") final String contactPerson,
+//            @DefaultValue("") @QueryParam("deptartmentname") final String departmentName,
+//            @DefaultValue("") @QueryParam("deptartmenturl") final String departmentURL,
             @DefaultValue("0") @QueryParam("offset") int offset,
             @DefaultValue("20") @QueryParam("size") int size) {
         try {
             return new GetAllPartnerUniversities(
                     this.serviceContext,
                     new QueryByName<>(name, offset, size)
+//                    new QueryByName<>(name, offset, size),
+//                    new QueryByCountry<>(country, offset, size)
+//                    new QueryByContactPerson<>(contactPerson, offset, size),
+//                    new QueryByDepartmentURL<>(departmentURL, offset, size)
+//                    new QueryByDepartmentName<>(departmentName, offset, size),
             ).execute();
         } catch (SuttonWebAppException e) {
             throw new WebApplicationException(e.getExceptionMessage(), e.getStatus().getCode());
@@ -95,7 +107,6 @@ public class PartnerUniversityJerseyService extends AbstractJerseyService {
                                          @DefaultValue("0") @QueryParam("offset") int offset,
                                          @DefaultValue("20") @QueryParam("size") int size) {
         try {
-            // TODO: QueryByModuleName
             return new GetAllPartnerUniversityModules(this.serviceContext, partnerUniversityId, new QueryByModuleName<>(partnerUniversityId, moduleName, offset, size)).execute();
         } catch (SuttonWebAppException e) {
             throw new WebApplicationException(Response.status(e.getStatus().getCode())

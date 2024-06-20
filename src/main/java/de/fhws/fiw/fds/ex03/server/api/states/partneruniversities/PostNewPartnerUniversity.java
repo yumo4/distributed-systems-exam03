@@ -20,6 +20,10 @@ public class PostNewPartnerUniversity extends AbstractPostState<Response, Partne
 
     @Override
     protected void defineTransitionLinks() {
-
+        addLink(PartnerUniversityUri.REL_PATH_ID, PartnerUniversityRelTypes.GET_SINGLE_PARTNERUNIVERSITY, getAcceptRequestHeader(),
+                this.modelToStore.getId());
+//        addLink( PartnerUniversityUri.REL_PATH_ID, PartnerUniversityRelTypes.DELETE_SINGLE_PARTNERUNIVERSITY, getAcceptRequestHeader( ),
+//                this.requestedId );
+//        addLink(PartnerUniversityModuleUri.REL_PATH, PartnerUniversityModuleRelTypes.CREATE_MODULE, getAcceptRequestHeader(), this.requestedId);
     }
 }

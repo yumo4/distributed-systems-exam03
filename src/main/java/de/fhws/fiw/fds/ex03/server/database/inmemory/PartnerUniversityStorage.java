@@ -69,31 +69,31 @@ public class PartnerUniversityStorage extends AbstractInMemoryStorage<PartnerUni
         return p -> (contactPerson.isEmpty() || p.getName().equals(contactPerson) );
     }
     // ByOutgoingStudents
-    @Override
-    public CollectionModelResult<PartnerUniversity> readByOutgoingStudents(int outgoingStudents, SearchParameter searchParameter) {
-        return InMemoryPaging.page(this.readAllByPredicate(
-                byOutgoingStudents(outgoingStudents),
-                searchParameter
-        ), searchParameter.getOffset(), searchParameter.getSize());
-    }
+//    @Override
+//    public CollectionModelResult<PartnerUniversity> readByOutgoingStudents(int outgoingStudents, SearchParameter searchParameter) {
+//        return InMemoryPaging.page(this.readAllByPredicate(
+//                byOutgoingStudents(outgoingStudents),
+//                searchParameter
+//        ), searchParameter.getOffset(), searchParameter.getSize());
+//    }
 
 
-    private Predicate<PartnerUniversity> byOutgoingStudents(Integer outgoingStudents) {
-        return p -> (outgoingStudents.toString().isEmpty()  || p.getOutgoingStudents() == outgoingStudents);
-    }
+//    private Predicate<PartnerUniversity> byOutgoingStudents(Integer outgoingStudents) {
+//        return p -> (outgoingStudents.toString().isEmpty()  || p.getOutgoingStudents() == outgoingStudents);
+//    }
     // ByIncomingStudents
-    @Override
-    public CollectionModelResult<PartnerUniversity> readByIncomingStudents(int incomingStudents, SearchParameter searchParameter) {
-        return InMemoryPaging.page(this.readAllByPredicate(
-                byIncomingStudents(incomingStudents),
-                searchParameter
-        ), searchParameter.getOffset(), searchParameter.getSize());
-    }
+//    @Override
+//    public CollectionModelResult<PartnerUniversity> readByIncomingStudents(int incomingStudents, SearchParameter searchParameter) {
+//        return InMemoryPaging.page(this.readAllByPredicate(
+//                byIncomingStudents(incomingStudents),
+//                searchParameter
+//        ), searchParameter.getOffset(), searchParameter.getSize());
+//    }
 
 
-    private Predicate<PartnerUniversity> byIncomingStudents(Integer incomingStudents) {
-        return p -> (incomingStudents.toString().isEmpty()  || p.getOutgoingStudents() == incomingStudents);
-    }
+//    private Predicate<PartnerUniversity> byIncomingStudents(Integer incomingStudents) {
+//        return p -> (incomingStudents.toString().isEmpty()  || p.getOutgoingStudents() == incomingStudents);
+//    }
     // ByStartSpringSemester
     // ByStartAutumnSemester
 
