@@ -192,7 +192,6 @@ public class TestEx03AppIT {
         pu2.setModules(moduleList2);
 
         client.getSinglePartnerUniversity();
-
         client.updatePartnerUniversity(0,pu2);
 //        client.updatePartnerUniversity(1,pu2);
 

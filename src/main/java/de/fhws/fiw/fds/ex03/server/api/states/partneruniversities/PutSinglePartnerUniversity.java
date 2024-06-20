@@ -12,8 +12,6 @@ import jakarta.ws.rs.core.Response;
 
 public class PutSinglePartnerUniversity extends AbstractPutState<Response, PartnerUniversity>  {
 
-
-
     public PutSinglePartnerUniversity(ServiceContext serviceContext, long requestedId, PartnerUniversity modelToUpdate) {
         super(serviceContext, requestedId, modelToUpdate);
         this.suttonResponse = new JerseyResponse<>();

@@ -192,16 +192,6 @@ public class Ex03RestClient extends AbstractRestClient{
                 this.cursorPartnerUniversityData = 0;
         }));
     }
-//     public void createPartnerUniversity(PartnerUniversityClientModel partnerUniversity) throws IOException{
-//        if(isCreatePartnerUniversityAllowed()){
-//            processResponse(this.client.postNewPartnerUniversity(getUrl(CREATE_PARTNERUNIVERSITY), partnerUniversity), (response) -> {
-//                this.currentPartnerUniversityData = Collections.EMPTY_LIST;
-//                this.cursorPartnerUniversityData= 0;
-//            });
-//        } else {
-//            throw new IllegalStateException();
-//        }
-//    }
     // [D]elete PU
 
     public void deletePartnerUniversity(int index) throws IOException {
